@@ -3,7 +3,7 @@
 echo "Scanning project: $1"
 bandit --version
 REPORT=$(bandit -r $1)
-OUTPUT="${REPORT//'%'/'%25'}"
-OUTPUT="${REPORT//$'\n'/'%0A'}"
-OUTPUT="${REPORT//$'\r'/'%0D'}"
+REPORT="${REPORT//'%'/'%25'}"
+REPORT="${REPORT//$'\n'/'%0A'}"
+REPORT="${REPORT//$'\r'/'%0D'}"
 echo "::set-output name=report::$REPORT"
