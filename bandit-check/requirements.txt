@@ -1,4 +1,1 @@
-requests
-requests[socks]
-urllib3
-tld
+bandit>=1.6.2
